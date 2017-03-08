@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './search';
 
 /**
  * @class
@@ -13,7 +14,11 @@ export default class Index extends Component {
 
   render() {
     return (
-     <div>Hello World :P</div>
+     <div className="wrapper">
+       <Search />
+
+       { this.props.children }
+     </div>
     )
   }
 }
