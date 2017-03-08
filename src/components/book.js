@@ -11,7 +11,25 @@ export class Book extends Component {
   }
 
   authorsToString(authors) {
-    return authors.map((author) => author).join(' ')
+    if (authors) {
+      return authors.map((author) => author).join(' ')
+    }
+
+    return '';
+  }
+
+  getThumbnail(thumbs) {
+    if (thumbs) {
+      if (thumbs.smallThumbnail) {
+        return thumbs.smallThumbnail
+      }
+
+      if (thumbs.thumbnai) {
+        return thumbs.thumbnai
+      }
+    }
+
+    return ''
   }
 
   render() {
@@ -21,7 +39,7 @@ export class Book extends Component {
           <h1 className="book__title">{ this.props.book.volumeInfo.title }</h1>
 
           { this.props.book.volumeInfo.subtitle
-            ? <h2 class="book__subtitle">{ this.props.book.volumeInfo.subtitle }</h2>
+            ? <h2 className="book__subtitle">{ this.props.book.volumeInfo.subtitle }</h2>
             : ''
           }
 
@@ -32,7 +50,7 @@ export class Book extends Component {
         </header>
 
         <div className="book__content">
-          <img className="book__image" src={ this.props.book.volumeInfo.imageLinks.thumbnail } />
+          <img className="book__image" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
         </div>
       </div>
     )
