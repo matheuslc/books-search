@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
 import { SEARCH, BOOKMARK, FETCH_BOOK, BOOKMARKS_LOCALSTORAGE_KEY } from '../actions/index';
+import { loadFromStorage } from '../storage/localStorage';
 
 const INITIAL_STATE = { books: [], book: null, bookmarks: [] };
 
@@ -14,7 +15,7 @@ function reducer(state = INITIAL_STATE, action) {
     case BOOKMARK:
       return {
         ...state,
-        bookmarks: JSON.parse(window.localStorage.get('BOOKMARKS_LOCALSTORAGE_KEY'))
+        bookmarks: loadFromStorage()
       }
     default:
       return state;
