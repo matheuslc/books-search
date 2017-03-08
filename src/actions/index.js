@@ -3,6 +3,7 @@ import axios from 'axios';
 export const SEARCH = 'SEARCH';
 export const BOOKMARK = 'BOOKMARK';
 export const FETCH_BOOK = 'FETCH_BOOK';
+export const BOOKMARKS_LOCALSTORAGE_KEY = 'BOOKMARKS';
 
 const URL = 'https://www.googleapis.com/books/v1/volumes'
 const API_KEY = 'AIzaSyBE3XoUsNc-m2t6N2NqxOOcHjiWn4HCRKc'
