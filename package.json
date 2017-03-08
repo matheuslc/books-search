@@ -1,0 +1,32 @@
+{
+  "name": "books-search",
+  "version": "1.0.0",
+  "description": "Books search application made with React, Redux and a lot of awesome things",
+  "main": "index.js",
+  "repository": "git@github.com:matheuslc/books-search.git",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "author": "Matheus Lucca do Carmo <mematheuslc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "react-addons-test-utils": "^0.14.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "babel-preset-stage-1": "^6.1.18",
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-promise": "^1.1.2",
+    "react-redux": "^4.0.0",
+    "react-router": "^2.0.1",
+    "redux": "^3.0.4"
+  }
+}
