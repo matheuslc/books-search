@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 /**
  * @class
@@ -34,26 +35,28 @@ export class Book extends Component {
 
   render() {
     return (
-      <div>
-        <header className="book__header">
-          <h1 className="book__title">{ this.props.book.volumeInfo.title }</h1>
+      <Link to={`books/${this.props.book.id}`}>
+        <div>
+          <header className="book__header">
+            <h1 className="book__title">{ this.props.book.volumeInfo.title }</h1>
 
-          { this.props.book.volumeInfo.subtitle
-            ? <h2 className="book__subtitle">{ this.props.book.volumeInfo.subtitle }</h2>
-            : ''
-          }
+            { this.props.book.volumeInfo.subtitle
+              ? <h2 className="book__subtitle">{ this.props.book.volumeInfo.subtitle }</h2>
+              : ''
+            }
 
-          <small className="book__more-info">
-            { this.authorsToString(this.props.book.volumeInfo.authors) }
-          </small>
-        </header>
+            <small className="book__more-info">
+              { this.authorsToString(this.props.book.volumeInfo.authors) }
+            </small>
+          </header>
 
-        <button onClick={() => this.props.bookmark(this.props.book)}>Bookmark</button>
+          <button onClick={() => this.props.bookmark(this.props.book)}>Bookmark</button>
 
-        <div className="book__content">
-          <img className="book__image" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
+          <div className="book__content">
+            <img className="book__image" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
+          </div>
         </div>
-      </div>
+      </Link>
     )
   }
 }
