@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { SEARCH, BOOKMARK, FETCH_BOOK } from '../actions/index';
 import { loadFromStorage } from '../storage/localStorage';
 
-const INITIAL_STATE = { books: [], book: null, bookmarks: [] };
+const INITIAL_STATE = { books: [], book: {}, bookmarks: [] };
 
 function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
@@ -26,12 +26,12 @@ function reducer(state = INITIAL_STATE, action) {
       };
     case FETCH_BOOK:
       if (action.fetching) {
-        return { ...state, book: [], fetching: true};
+        return { ...state, book: {}, fetching: true};
       }
 
       return {
         ...state,
-        book: action.payload.data.items,
+        book: action.payload.data,
         fetching: false
       };
     case BOOKMARK:
