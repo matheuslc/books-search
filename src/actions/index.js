@@ -28,20 +28,28 @@ export const bookmark = (book) => {
 }
 
 export const search = (term = 'React', start = 0, max = MAX_RESULTS) => {
-  const request = axios.get(`${URL}?q=${term}&startIndex=${start}&maxResults=${max}&key=${API_KEY}`);
+  const request = axios.get(`${URL}?q=${term}&startIndex=${start}&maxResults=${max}&projection=lite&key=${API_KEY}`);
 
   return dispatch => {
     dispatch({
       type: SEARCH,
       fetching: true,
       payload: request,
+      error: false,
       term
     });
 
-    request.then((response) => dispatch({
+    return request.then((response) => dispatch({
       type: SEARCH,
       fetching: false,
       payload: response,
+      error: false,
+      term
+    })).catch((error) => dispatch({
+      type: SEARCH,
+      fetching: false,
+      payload: error,
+      error: true,
       term
     }))
   }
@@ -54,13 +62,20 @@ export const fetchBook = (bookId) => {
     dispatch({
       type: FETCH_BOOK,
       fetching: true,
+      error: false,
       payload: request
     });
 
-    request.then((response) => dispatch({
+    return request.then((response) => dispatch({
       type: FETCH_BOOK,
       fetching: false,
+      error: false,
       payload: response
+    })).catch((error) => dispatch({
+      type: FETCH_BOOK,
+      fetching: false,
+      error: true,
+      payload: error
     }))
   }
 }
