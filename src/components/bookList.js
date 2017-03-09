@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { search } from '../actions/index';
+import { search, bookmark } from '../actions/index';
 import { Book } from '../components/book';
 
 /**
@@ -17,7 +17,7 @@ class BookList extends Component {
     return this.props.books.map((book) => {
       return (
         <div key={book.id}>
-          <Book book={book} />
+          <Book book={book} bookmark={this.props.bookmark} />
         </div>
       )
     })
@@ -36,4 +36,4 @@ function mapStateToProps(state) {
   return { books: state.books.books };
 }
 
-export default connect(mapStateToProps, { search })(BookList)
+export default connect(mapStateToProps, { search, bookmark })(BookList)

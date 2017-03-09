@@ -14,8 +14,10 @@ const createStoreWithMiddleware = applyMiddleware(
   reduxPromise
 )(createStore);
 
+const storage = createStoreWithMiddleware(reducers, storageState);
+
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers, storageState)}>
+  <Provider store={storage}>
     <Router history={browserHistory} routes={routes} />
   </Provider>
   , document.querySelector('.root'));

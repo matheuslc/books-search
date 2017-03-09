@@ -46,8 +46,9 @@ export class Book extends Component {
           <small className="book__more-info">
             { this.authorsToString(this.props.book.volumeInfo.authors) }
           </small>
-
         </header>
+
+        <button onClick={() => this.props.bookmark(this.props.book)}>Bookmark</button>
 
         <div className="book__content">
           <img className="book__image" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
