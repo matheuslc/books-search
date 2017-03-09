@@ -21,7 +21,7 @@ export const bookmark = (book) => {
   }
 
   return {
-    type: 'BOOKMARK',
+    type: BOOKMARK,
     payload: book
   }
 }
@@ -29,17 +29,35 @@ export const bookmark = (book) => {
 export const search = (term = 'React', start = 0, max  = 30) => {
   const request = axios.get(`${URL}?q=${term}&startIndex=${start}&max=${max}&key=${API_KEY}`);
 
-  return {
-    type: SEARCH,
-    payload: request
+  return dispatch => {
+    dispatch({
+      type: SEARCH,
+      fetching: true,
+      payload: request
+    });
+
+    request.then((response) => dispatch({
+      type: SEARCH,
+      fetching: false,
+      payload: response
+    }))
   }
 }
 
 export const fetchBook = (bookId) => {
-  const request = axios.get(`${URL}${bookId}?key=${API_KEY}`);
+  const request = axios.get(`${URL}/${bookId}?key=${API_KEY}`);
 
-  return {
-    type: FETCH_BOOK,
-    payload: request
+  return dispatch => {
+    dispatch({
+      type: FETCH_BOOK,
+      fetching: true,
+      payload: request
+    });
+
+    request.then((response) => dispatch({
+      type: FETCH_BOOK,
+      fetching: false,
+      payload: response
+    }))
   }
 }

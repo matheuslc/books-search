@@ -8,10 +8,17 @@ const INITIAL_STATE = { books: [], book: null, bookmarks: [] };
 function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case SEARCH:
-      return { ...state, books: action.payload.data.items };
-    case FETCH_BOOK:
-      return { ...state, book: action.payload.data.items };
+      if (action.fetching) {
+        return { ...state, books: [], fetching: true}
+      }
 
+      return { ...state, books: action.payload.data.items, fetching: false };
+    case FETCH_BOOK:
+      if (action.fetching) {
+        return { ...state, book: [], fetching: true};
+      }
+
+      return { ...state, book: action.payload.data.items, fetching: false };
     case BOOKMARK:
       return {
         ...state,
