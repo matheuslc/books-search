@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { MAX_RESULTS } from '../actions/index';
 import { search, bookmark } from '../actions/index';
 import { Book } from '../components/book';
+import { Pagination } from '../components/pagination';
 
 /**
  * @class
@@ -28,6 +30,12 @@ class BookList extends Component {
       return (
         <div>
           { this.renderBooks() }
+
+          <Pagination
+            totalItems={this.props.totalItems}
+            maxResult={MAX_RESULTS}
+            term={this.props.term}
+            search={this.props.search} />
         </div>
       )
     }
@@ -43,7 +51,9 @@ class BookList extends Component {
 function mapStateToProps(state) {
   return {
     books: state.books.books,
-    fetching: state.books.fetching
+    fetching: state.books.fetching,
+    totalItems: state.books.totalItems,
+    term: state.books.term
   };
 }
 

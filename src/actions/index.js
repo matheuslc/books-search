@@ -4,6 +4,7 @@ export const SEARCH = 'SEARCH';
 export const BOOKMARK = 'BOOKMARK';
 export const FETCH_BOOK = 'FETCH_BOOK';
 export const BOOKMARKS_LOCALSTORAGE_KEY = 'BOOKMARKS';
+export const MAX_RESULTS = 20;
 
 /**
  * Google Books API URL and Key
@@ -26,20 +27,22 @@ export const bookmark = (book) => {
   }
 }
 
-export const search = (term = 'React', start = 0, max  = 30) => {
-  const request = axios.get(`${URL}?q=${term}&startIndex=${start}&max=${max}&key=${API_KEY}`);
+export const search = (term = 'React', start = 0, max = MAX_RESULTS) => {
+  const request = axios.get(`${URL}?q=${term}&startIndex=${start}&maxResults=${max}&key=${API_KEY}`);
 
   return dispatch => {
     dispatch({
       type: SEARCH,
       fetching: true,
-      payload: request
+      payload: request,
+      term
     });
 
     request.then((response) => dispatch({
       type: SEARCH,
       fetching: false,
-      payload: response
+      payload: response,
+      term
     }))
   }
 }

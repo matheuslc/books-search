@@ -9,16 +9,31 @@ function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case SEARCH:
       if (action.fetching) {
-        return { ...state, books: [], fetching: true}
+        return {
+          ...state,
+          books: [],
+          fetching: true,
+          term: action.term
+        }
       }
 
-      return { ...state, books: action.payload.data.items, fetching: false };
+      return {
+        ...state,
+        books: action.payload.data.items,
+        fetching: false,
+        totalItems: action.payload.data.totalItems,
+        term: action.term
+      };
     case FETCH_BOOK:
       if (action.fetching) {
         return { ...state, book: [], fetching: true};
       }
 
-      return { ...state, book: action.payload.data.items, fetching: false };
+      return {
+        ...state,
+        book: action.payload.data.items,
+        fetching: false
+      };
     case BOOKMARK:
       return {
         ...state,

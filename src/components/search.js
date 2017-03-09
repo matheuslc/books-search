@@ -15,8 +15,6 @@ class Search extends Component {
 
   search(event) {
     this.props.search(event.target.value);
-
-    console.log('this', this.props.location);
   }
 
   render() {
