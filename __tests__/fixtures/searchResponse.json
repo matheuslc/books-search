@@ -1,0 +1,128 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 495,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "HUoDDQAAQBAJ",
+      "etag": "ZNINdk6OXIc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/HUoDDQAAQBAJ",
+      "volumeInfo": {
+        "title": "Primeiros passos com React",
+        "subtitle": "Construindo aplicações web",
+        "authors": [
+          "Stoyan Stefanov"
+        ],
+        "publisher": "Novatec Editora",
+        "publishedDate": "2016-09-09",
+        "description": "Saia trabalhando de imediato com React: a tecnologia de código aberto do Facebook para construir rapidamente aplicações web sofisticadas. Com este guia prático, o desenvolvedor web Stoyan Stefanov ensina você a construir componentes – os blocos de construção básicos da React – e a organizá-los em aplicações de larga escala, viáveis do ponto de vista da manutenção. Se você tiver familiaridade com a sintaxe básica de JavaScript, estará pronto para começar. Depois de entender como React funciona, você construirá uma aplicação personalizada Whinepad completa para ajudar os usuários a classificar vinhos e a guardar anotações. Você aprenderá rapidamente por que alguns desenvolvedores consideram React essencial para o quebra-cabeça que é o desenvolvimento de aplicações web. Instale React e escreva sua primeira aplicação web “Hello world”. Crie componentes React personalizados, usando-os juntamente com componentes DOM genéricos. Construa um componente de tabela de dados que permita editar, ordenar, pesquisar e exportar seu conteúdo. Utilize a extensão de sintaxe JSX como alternativa a chamadas de função. Configure um processo de construção simples, de baixo nível, que ajude você a se concentrar na React. Construa uma aplicação personalizada completa que permita armazenar dados no cliente. Use as ferramentas ESLint, Flow e Jest para verificar e testar o seu código à medida que sua aplicação evoluir. Administre a comunicação entre os componentes usando Flux.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=HUoDDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=HUoDDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "previewLink": "http://books.google.com.br/books?id=HUoDDQAAQBAJ&printsec=frontcover&dq=React&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com.br/books?id=HUoDDQAAQBAJ&dq=React&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.com.br/books/about/Primeiros_passos_com_React.html?hl=&id=HUoDDQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BR"
+      },
+      "accessInfo": {
+        "country": "BR",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Com este guia prático, o desenvolvedor web Stoyan Stefanov ensina você a construir componentes – os blocos de construção básicos da React – e a organizá-los em aplicações de larga escala, viáveis do ponto de vista da ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Rhl1CgAAQBAJ",
+      "etag": "+JcceLQgy1Y",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Rhl1CgAAQBAJ",
+      "volumeInfo": {
+        "title": "React.js Essentials",
+        "authors": [
+          "Artemij Fedosejev"
+        ],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2015-08-27",
+        "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.js About This Book Build maintainable and performant user interfaces for your web applications using React.js Create reusable React.js components to save time and effort in maintaining your user interfaces Learn how to build a ready-to-deploy React.js web application, following our step-by-step tutorial Who This Book Is For If you're a front-end developer with knowledge of jQuery and its libraries, along with frameworks, such as Angular.JS and Backbone.JS, or native JavaScript development, and you wish to use the fastest web user interface library there is, then this book is ideal for you. What You Will Learn Install powerful React.js tools to make development much more efficient Create React elements with properties and children Get started with stateless and stateful React components Use JSX to speed up your React.js development process Add reactivity to your React components with lifecycle methods Integrate your React components with other JavaScript libraries Utilize the Flux application architecture with your React components Test your React components with Jest test framework In Detail Building web applications with maintainable and performant user interfaces is a challenge that many have faced for more than a decade, but no one has risen to this challenge quite like React.js. Today React.js is used by Facebook, Instagram, Khan Academy, and Imperial College London, to name a few. Many new users recognize the benefits of React.js and adopt it in their own projects, forming a fast-growing community. The speed at which React.js has evolved promises a bright future for those who invest in learning it today. React.js Essentials will take you on a fast-paced journey through building your own maintainable React.js application. Begin by exploring how you can create single and multiple user interface elements. Create stateless and stateful components and make them reactive, learn to interact between your components and lifecycle methods and gauge how to effectively integrate your user interface components with other JavaScript libraries. Delve deep into the core elements of the Flux architecture and learn how to manage your application using stores. Finish by going that extra mile with the Jest test framework, running multiple tests on your application and find solutions to scale it further without complexity. Style and approach The book adopts a step-by-step, hands-on approach with ample codes to ensure you learn React.js at a fast pace.",
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "previewLink": "http://books.google.com.br/books?id=Rhl1CgAAQBAJ&printsec=frontcover&dq=React&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=Rhl1CgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-Rhl1CgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BR",
+        "listPrice": {
+          "amount": 74.99,
+          "currencyCode": "BRL"
+        },
+        "retailPrice": {
+          "amount": 74.99,
+          "currencyCode": "BRL"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=Rhl1CgAAQBAJ&rdid=book-Rhl1CgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 7.499E7,
+              "currencyCode": "BRL"
+            },
+            "retailPrice": {
+              "amountInMicros": 7.499E7,
+              "currencyCode": "BRL"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "BR",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "A fast-paced guide to designing and building scalable and maintainable web apps with React.js About This Book Build maintainable and performant user interfaces for your web applications using React.js Create reusable React.js components to ..."
+      }
+    }
+  ]
+}
