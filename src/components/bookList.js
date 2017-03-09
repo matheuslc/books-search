@@ -24,16 +24,27 @@ class BookList extends Component {
   }
 
   render() {
+    if (!this.props.fetching) {
+      return (
+        <div>
+          { this.renderBooks() }
+        </div>
+      )
+    }
+
     return (
       <div>
-        { this.renderBooks() }
+        Loading
       </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  return { books: state.books.books };
+  return {
+    books: state.books.books,
+    fetching: state.books.fetching
+  };
 }
 
 export default connect(mapStateToProps, { search, bookmark })(BookList)
