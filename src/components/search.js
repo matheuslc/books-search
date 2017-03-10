@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as _ from 'lodash';
 import { search } from '../actions/index';
 
 /**
@@ -10,11 +11,10 @@ import { search } from '../actions/index';
 class Search extends Component {
   constructor(props) {
     super(props);
-    this.search = this.search.bind(this);
   }
 
-  search(event) {
-    return this.props.search(event.target.value);
+  search(query) {
+    return this.props.search(query);
   }
 
   render() {
@@ -27,8 +27,12 @@ class Search extends Component {
         </header>
 
         <input className="search__input"
-               type="search"
-               onChange={ this.search } />
+               type="text"
+               onChange={ (event) => this.setState({
+                 query: event.target.value
+               }) } />
+
+        <button onClick={() => this.search(this.state.query)}>Vai!</button>
       </nav>
     )
   }

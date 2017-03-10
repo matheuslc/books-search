@@ -18,7 +18,7 @@ class BookList extends Component {
   renderBooks() {
     return this.props.books.map((book) => {
       return (
-        <div key={book.id} className="col-xs-12 col-md-4 col-lg-3">
+        <div key={book.id} className="col-xs-12 col-md-6 col-lg-6">
           <Book
             book={book}
             term={this.props.term}

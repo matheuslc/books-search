@@ -12,7 +12,7 @@ export class Pagination extends Component {
   }
 
   getPages(term, items, max) {
-    let i = 0;
+    let i = 1;
     let elements = [];
 
     for (i; i < items / max; i++) {
