@@ -6,7 +6,7 @@
   "repository": "git@github.com:matheuslc/books-search.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "build": "webpack -p --config webpack.config.prod.js",
+    "build": "npm test && webpack -p --config webpack.config.prod.js",
     "publish": "surge -p dist --domain aromatic-sand.surge.sh",
     "deploy": "npm run build",
     "test": "jest",
