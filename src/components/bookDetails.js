@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 /**
  * @class
- * @name BookDetail
- * @description BookDetail
+ * @name BookDetails
+ * @description BookDetails
  */
-export class BookDetail extends Component {
+export class BookDetails extends Component {
   constructor(props) {
     super(props);
   }
