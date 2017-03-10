@@ -18,8 +18,11 @@ class BookList extends Component {
   renderBooks() {
     return this.props.books.map((book) => {
       return (
-        <div key={book.id}>
-          <Book book={book} bookmark={this.props.bookmark} />
+        <div key={book.id} className="col-xs-12 col-md-4 col-lg-3">
+          <Book
+            book={book}
+            term={this.props.term}
+            bookmark={this.props.bookmark} />
         </div>
       )
     })
@@ -28,7 +31,7 @@ class BookList extends Component {
   render() {
     if (!this.props.fetching) {
       return (
-        <div>
+        <div className="books row">
           { this.renderBooks() }
 
           <Pagination

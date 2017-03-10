@@ -14,14 +14,22 @@ class Search extends Component {
   }
 
   search(event) {
-    this.props.search(event.target.value);
+    return this.props.search(event.target.value);
   }
 
   render() {
     return (
-      <input className="search__input"
-             type="search"
-             onChange={this.search} />
+      <nav className="search row">
+        <header className="search__header col-xs-12 col-md-4">
+          <h1 className="search__header__title">
+            Search a book here!
+          </h1>
+        </header>
+
+        <input className="search__input"
+               type="search"
+               onChange={ this.search } />
+      </nav>
     )
   }
 }

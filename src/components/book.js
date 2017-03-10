@@ -22,41 +22,59 @@ export class Book extends Component {
   getThumbnail(thumbs) {
     if (thumbs) {
       if (thumbs.smallThumbnail) {
-        return thumbs.smallThumbnail
+        return thumbs.smallThumbnail;
       }
 
-      if (thumbs.thumbnai) {
-        return thumbs.thumbnai
+      if (thumbs.thumbnail) {
+        return thumbs.thumbnail;
       }
     }
 
-    return ''
+    return '';
+  }
+
+  hightlightTerm(term, text) {
+    let words = text.split(' ');
+
+    return words.map((word, index) => {
+      if (word.toLocaleLowerCase() === term.toLowerCase()) {
+        return (
+          <strong key={index}>{ word }</strong>
+        );
+      }
+
+      return (
+        <span key={index}> { word } </span>
+      );
+    });
   }
 
   render() {
     return (
-      <Link to={`books/${this.props.book.id}`}>
-        <div>
-          <header className="book__header">
-            <h1 className="book__title">{ this.props.book.volumeInfo.title }</h1>
+      <div className="book">
+        <header className="book__header">
+          <Link to={`books/${this.props.book.id}`}>
+            <h1 className="book__title">{ this.hightlightTerm(this.props.term, this.props.book.volumeInfo.title) }</h1>
+          </Link>
 
-            { this.props.book.volumeInfo.subtitle
-              ? <h2 className="book__subtitle">{ this.props.book.volumeInfo.subtitle }</h2>
-              : ''
+          <small className="book__more-info">
+            { this.authorsToString(this.props.book.volumeInfo.authors) }
+          </small>
+        </header>
+
+        <section className="book__content row">
+          <img className="book__content__image col-xs-6" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
+
+          <p className="book__content__description col-xs-6">
+            { this.props.book.searchInfo !== undefined
+              ? <span dangerouslySetInnerHTML={{__html: this.props.book.searchInfo.textSnippet }}></span>
+              : 'No description provied'
             }
+          </p>
+        </section>
 
-            <small className="book__more-info">
-              { this.authorsToString(this.props.book.volumeInfo.authors) }
-            </small>
-          </header>
-
-          <button onClick={() => this.props.bookmark(this.props.book)}>Bookmark</button>
-
-          <div className="book__content">
-            <img className="book__image" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
-          </div>
-        </div>
-      </Link>
+        <button onClick={() => this.props.bookmark(this.props.book)}>Bookmark</button>
+      </div>
     )
   }
 }
