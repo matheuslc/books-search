@@ -43,7 +43,7 @@ class BookmarkContainer extends Component {
     }
 
     return (
-      <div>porra</div>
+      <div>Loading</div>
     )
   }
 }

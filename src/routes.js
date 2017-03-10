@@ -8,7 +8,7 @@ import BookmarkContainer from './components/bookmarkContainer';
 export default (
   <Route path="/" component={Index}>
     <IndexRoute component={BookList} />
-    <Route path="/books/:bookId" component={BookDetailContainer}/>
-    <Route path="/bookmarks" component={BookmarkContainer}/>
+    <Route path="books/:bookId" component={BookDetailContainer} />
+    <Route path="bookmarks" component={BookmarkContainer} />
   </Route>
 );
