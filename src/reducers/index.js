@@ -5,6 +5,12 @@ import { loadFromStorage } from '../storage/localStorage';
 
 const INITIAL_STATE = { books: [], book: {}, bookmarks: [] };
 
+/**
+ * @name reducer
+ * @param state
+ * @param action
+ * @returns {Object} New state
+ */
 function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case SEARCH:
