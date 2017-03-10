@@ -20,7 +20,7 @@ describe('Redux reducers', () => {
     expect(reducer(undefined, {})).to.deep.equal({
       books: {
         books: [],
-        book: null,
+        book: {},
         bookmarks: []
       }
     })
@@ -36,7 +36,7 @@ describe('Redux reducers', () => {
     })).to.be.deep.equal({
       books: {
         books: searchResponse.items,
-        book: null,
+        book: {},
         bookmarks: [],
         fetching: false,
         totalItems: 2,
@@ -74,13 +74,11 @@ describe('Redux reducers', () => {
       books: {
         books: [],
         bookmarks: {
-         bookmarks: [
-           {
+         bookmarks: [{
              'Rhl1CgAAQBAJ': bookResponse
-           }
-         ]
+         }]
         },
-        book: null
+        book: {}
       }
     })
 
