@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBook } from '../actions/index';
-import { BookDetail } from './bookDetail';
+import { BookDetails } from './bookDetails';
 
 /**
  * @class
- * @name BookDescription
+ * @name BookDetailContainer
  * @description constructor
  */
-class BookDescription extends Component {
+class BookDetailContainer extends Component {
   constructor(props) {
     super(props);
   }
@@ -18,8 +18,16 @@ class BookDescription extends Component {
   }
 
   render() {
+    if (!this.props.fetching) {
+      return (
+        <div>
+          <BookDetails book={this.props.book} />
+        </div>
+      )
+    }
+
     return (
-      <BookDetail book={this.props.book} />
+      <div>Loading</div>
     )
   }
 }
@@ -27,8 +35,9 @@ class BookDescription extends Component {
 function mapStateToProps(state) {
   return {
     book: state.books.book,
-    fetching: state.books.fetching
+    fetching: state.books.fetching,
+    error: state.error
   };
 }
 
-export default connect(mapStateToProps, { fetchBook })(BookDescription)
+export default connect(mapStateToProps, { fetchBook })(BookDetailContainer)
