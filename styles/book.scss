@@ -1,8 +1,12 @@
 .book {
-  text-align: center;
   padding: 8px;
-  height: 200px;
+  height: 250px;
+  margin-bottom: 32px;
   overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 
   a {
     text-decoration: none;
@@ -10,29 +14,28 @@
   }
 
   &__title {
-    font-size: 2.2rem;
     margin-bottom: 0;
+    font-size: 1.6rem;
+    text-align: left;
 
     strong {
       color: red;
+      display: inline;
     }
   }
 
-  &__subtitle {
-    font-size: 1.6rem;
-    margin-top: 6px;
-  }
-
-  &__header {
-    text-align: left;
-  }
-
   &__content {
-    text-align: left;
     margin-top: 8px;
 
+    &__image {
+      padding-right: 0;
+    }
+
+    &__author {
+      font-size: 1.4rem;
+    }
+
     &__description {
-      margin-top: 0;
       font-size: 1.2rem;
     }
   }

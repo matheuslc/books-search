@@ -15,7 +15,7 @@ export class Pagination extends Component {
     let i = 1;
     let elements = [];
 
-    for (i; i < items / max; i++) {
+    for (i; i < ((items / max) - 2); i++) {
       elements.push(
         this.createPagesElements(term, i)
       )
@@ -26,19 +26,22 @@ export class Pagination extends Component {
 
   createPagesElements(term, page) {
     return (
-      <li key={page} onClick={() => this.props.search(term, page * MAX_RESULTS)}>{ page }</li>
+      <li className="page-item"
+          key={page} onClick={() => {
+        this.props.search(term, page * MAX_RESULTS)
+      }}>
+        <a className="page-link"> { page } </a>
+      </li>
     )
   }
 
   render() {
     return (
-      <div>
-        <ul>
+      <nav className="pagination-component">
+        <ul className="pagination">
           { this.getPages(this.props.term, this.props.totalItems, MAX_RESULTS) }
         </ul>
-
-        Total { this.props.totalItems }
-      </div>
+      </nav>
     )
   }
 }

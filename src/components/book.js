@@ -58,11 +58,11 @@ export class Book extends Component {
         </header>
 
         <section className="book__content row">
-          <div className="col-lg-3">
+          <div className="col-xs-12 col-md-3 book__content__image">
             <img className="book__content__image" src={ this.getThumbnail(this.props.book.volumeInfo.imageLinks) } />
           </div>
 
-          <div className="col-xs-9">
+          <div className="col-xs-12 col-md-9">
             <p className="book__content__author">
               { this.authorsToString(this.props.book.volumeInfo.authors) }
             </p>

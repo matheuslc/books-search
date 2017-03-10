@@ -8,13 +8,12 @@ import Search from './search';
  */
 export default class Index extends Component {
   constructor(props) {
-
     super(props);
   }
 
   render() {
     return (
-     <div className="wrapper">
+     <div className="container-fluid">
        <Search />
 
        { this.props.children }

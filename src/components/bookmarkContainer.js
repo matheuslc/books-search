@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchBookmark } from '../actions/index';
+import { fetchBookmark, bookmark } from '../actions/index';
 import { Book } from '../components/book';
 
 /**
@@ -54,4 +54,4 @@ function mapStateToProps(state) {
  }
 }
 
-export default connect(mapStateToProps, { fetchBookmark })(BookmarkContainer)
+export default connect(mapStateToProps, { fetchBookmark, bookmark })(BookmarkContainer)

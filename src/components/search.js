@@ -20,22 +20,25 @@ class Search extends Component {
 
   render() {
     return (
-      <nav className="search row">
-        <header className="search__header col-xs-12 col-md-4">
-          <h1 className="search__header__title">
-            Search a book here!
-          </h1>
-        </header>
+      <nav className="search row justify-content-md-center">
+        <div className="col-6">
+          <h1 className="text-center">Yes! You can search.</h1>
+          <div className="input-group">
+            <input className="form-control"
+                   type="text"
+                   placeholder="What's the title of your book?"
+                   onChange={ (event) => this.setState({
+                     query: event.target.value
+                   }) } />
 
-        <input className="search__input"
-               type="text"
-               onChange={ (event) => this.setState({
-                 query: event.target.value
-               }) } />
-
-        <Link to="/">
-          <button onClick={() => this.search(this.state.query)}>Vai!</button>
-        </Link>
+            <Link to="/"
+              onClick={() => this.search(this.state.query)}>
+              <span className="input-group-addon">
+                Search
+              </span>
+            </Link>
+          </div>
+        </div>
       </nav>
     )
   }
