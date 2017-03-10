@@ -1,6 +1,8 @@
 .book {
   text-align: center;
   padding: 8px;
+  height: 200px;
+  overflow: hidden;
 
   a {
     text-decoration: none;
@@ -31,6 +33,7 @@
 
     &__description {
       margin-top: 0;
+      font-size: 1.2rem;
     }
   }
 }

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { SEARCH, BOOKMARK, FETCH_BOOK } from '../actions/index';
+import { SEARCH, BOOKMARK, FETCH_BOOK, FETCH_BOOKMARK } from '../actions/index';
 import { loadFromStorage } from '../storage/localStorage';
 
 const INITIAL_STATE = { books: [], book: {}, bookmarks: [] };
@@ -44,7 +44,12 @@ function reducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         bookmarks: loadFromStorage()
-      }
+      };
+    case FETCH_BOOKMARK:
+      return {
+        ...state,
+        bookmarks: action.payload
+      };
     default:
       return state;
   }
