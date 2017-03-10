@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const SEARCH = 'SEARCH';
 export const BOOKMARK = 'BOOKMARK';
+export const FETCH_BOOKMARK = 'FETCH_BOOKMARK';
 export const FETCH_BOOK = 'FETCH_BOOK';
 export const BOOKMARKS_LOCALSTORAGE_KEY = 'BOOKMARKS';
 export const MAX_RESULTS = 20;
@@ -12,7 +13,7 @@ export const MAX_RESULTS = 20;
 const URL = 'https://www.googleapis.com/books/v1/volumes';
 const API_KEY = 'AIzaSyBE3XoUsNc-m2t6N2NqxOOcHjiWn4HCRKc';
 
-import { saveToStorage, removeFromStorage } from '../storage/localStorage';
+import { saveToStorage, removeFromStorage, loadFromStorage } from '../storage/localStorage';
 
 export const bookmark = (book) => {
   const status = saveToStorage(book);
@@ -25,6 +26,18 @@ export const bookmark = (book) => {
     type: BOOKMARK,
     payload: book
   }
+}
+
+export const fetchBookmark = () => {
+  const bookmarks = loadFromStorage();
+
+
+  return dispatch => {
+    dispatch({
+      type: FETCH_BOOKMARK,
+      payload: bookmarks
+    })
+  };
 }
 
 export const search = (term = 'React', start = 0, max = MAX_RESULTS) => {
