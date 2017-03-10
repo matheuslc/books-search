@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -13,16 +15,16 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015', 'stage-1']
+          presets: ['react', 'es2015', 'stage-2']
         }
       }, {
         test: /\.scss$/,
         use: [{
-          loader: "style-loader" // creates style nodes from JS strings
+          loader: "style-loader"
         }, {
-          loader: "css-loader" // translates CSS into CommonJS
+          loader: "css-loader"
         }, {
-          loader: "sass-loader" // compiles Sass to CSS
+          loader: "sass-loader"
         }]
       }
     ]
@@ -30,6 +32,14 @@ module.exports = {
   resolve: {
     extensions: [".js", ".json", ".jsx", ".css"],
   },
+  plugins: [
+    new HtmlWebpackPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development')
+      }
+    })
+  ],
   devServer: {
     historyApiFallback: true,
     contentBase: './'

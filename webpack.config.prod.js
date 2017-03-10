@@ -1,26 +1,47 @@
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: [
-    './src/index.js'
+    path.resolve(__dirname, './src/index.js')
   ],
   output: {
-    path: __dirname,
-    publicPath: '/dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['react', 'es2015', 'stage-1']
+    rules: [
+      {
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015', 'stage-2']
+        }
+      }, {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader"
+        }]
       }
-    }]
+    ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: [".js", ".json", ".jsx", ".css"],
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  }
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: 'index.html',
+      to: 'index.html'
+    }]),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development')
+      }
+    })
+  ]
 };
