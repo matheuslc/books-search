@@ -8,6 +8,8 @@ import routes from './routes';
 import thunk from 'redux-thunk';
 import { loadFromStorage } from './storage/localStorage';
 
+require('../styles/styles.scss');
+
 const storageState = loadFromStorage();
 
 const createStoreWithMiddleware = applyMiddleware(

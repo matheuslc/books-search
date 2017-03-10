@@ -1,0 +1,36 @@
+.book {
+  text-align: center;
+  padding: 8px;
+
+  a {
+    text-decoration: none;
+    color: #1a0dab;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+
+    strong {
+      color: red;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.6rem;
+    margin-top: 6px;
+  }
+
+  &__header {
+    text-align: left;
+  }
+
+  &__content {
+    text-align: left;
+    margin-top: 8px;
+
+    &__description {
+      margin-top: 0;
+    }
+  }
+}
