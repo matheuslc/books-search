@@ -1,0 +1,42 @@
+.book {
+  padding: 8px;
+  height: 250px;
+  margin-bottom: 32px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1a0dab;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    text-align: left;
+
+    strong {
+      color: red;
+      display: inline;
+    }
+  }
+
+  &__content {
+    margin-top: 8px;
+
+    &__image {
+      padding-right: 0;
+    }
+
+    &__author {
+      font-size: 1.4rem;
+    }
+
+    &__description {
+      font-size: 1.2rem;
+    }
+  }
+}

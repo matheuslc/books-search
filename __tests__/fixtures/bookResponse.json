@@ -1,0 +1,111 @@
+{
+  "kind": "books#volume",
+  "id": "Rhl1CgAAQBAJ",
+  "etag": "KONffQ1/DHI",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/Rhl1CgAAQBAJ",
+  "volumeInfo": {
+    "title": "React.js Essentials",
+    "authors": [
+      "Artemij Fedosejev"
+    ],
+    "publisher": "Packt Publishing Ltd",
+    "publishedDate": "2015-08-27",
+    "description": "\u003cp\u003e\u003cb\u003eA fast-paced guide to designing and building scalable and maintainable web apps with React.js\u003c/b\u003e\u003c/p\u003eAbout This Book\u003cul\u003e\u003cli\u003eBuild maintainable and performant user interfaces for your web applications using React.js\u003c/li\u003e\u003cli\u003eCreate reusable React.js components to save time and effort in maintaining your user interfaces\u003c/li\u003e\u003cli\u003eLearn how to build a ready-to-deploy React.js web application, following our step-by-step tutorial\u003c/li\u003e\u003c/ul\u003eWho This Book Is For\u003cp\u003eIf you're a front-end developer with knowledge of jQuery and its libraries, along with frameworks, such as Angular.JS and Backbone.JS, or native JavaScript development, and you wish to use the fastest web user interface library there is, then this book is ideal for you.\u003c/p\u003eWhat You Will Learn\u003cul\u003e\u003cli\u003eInstall powerful React.js tools to make development much more efficient\u003c/li\u003e\u003cli\u003eCreate React elements with properties and children\u003c/li\u003e\u003cli\u003eGet started with stateless and stateful React components\u003c/li\u003e\u003cli\u003eUse JSX to speed up your React.js development process\u003c/li\u003e\u003cli\u003eAdd reactivity to your React components with lifecycle methods\u003c/li\u003e\u003cli\u003eIntegrate your React components with other JavaScript libraries\u003c/li\u003e\u003cli\u003eUtilize the Flux application architecture with your React components\u003c/li\u003e\u003cli\u003eTest your React components with Jest test framework\u003c/li\u003e\u003c/ul\u003eIn Detail\u003cp\u003eBuilding web applications with maintainable and performant user interfaces is a challenge that many have faced for more than a decade, but no one has risen to this challenge quite like React.js. Today React.js is used by Facebook, Instagram, Khan Academy, and Imperial College London, to name a few. Many new users recognize the benefits of React.js and adopt it in their own projects, forming a fast-growing community. The speed at which React.js has evolved promises a bright future for those who invest in learning it today.\u003c/p\u003e\u003cp\u003eReact.js Essentials will take you on a fast-paced journey through building your own maintainable React.js application. Begin by exploring how you can create single and multiple user interface elements. Create stateless and stateful components and make them reactive, learn to interact between your components and lifecycle methods and gauge how to effectively integrate your user interface components with other JavaScript libraries. Delve deep into the core elements of the Flux architecture and learn how to manage your application using stores. Finish by going that extra mile with the Jest test framework, running multiple tests on your application and find solutions to scale it further without complexity.\u003c/p\u003eStyle and approach\u003cp\u003eThe book adopts a step-by-step, hands-on approach with ample codes to ensure you learn React.js at a fast pace.\u003c/p\u003e",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1782174621"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781782174622"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": true
+    },
+    "pageCount": 208,
+    "printedPageCount": 208,
+    "printType": "BOOK",
+    "categories": [
+      "Computers / Programming / Object Oriented",
+      "Computers / Programming Languages / JavaScript",
+      "Computers / Programming Languages / HTML",
+      "Computers / Programming Languages / Java",
+      "Computers / Web / Social Networking",
+      "Computers / Web / User Generated Content"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.1.1.0.preview.3",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70Uj8pCaA-0pGe6hO4TVu4xEUpeWZmaVlhe2AFWrIBlhhAnz-HWrEVGt6Ppg6dQTU2ZbrkQZPHOga3hBhELO3BtbtT_TJHzU-R15SkSVAhbPAmvgIPfD6Gq-o-sxr2bZabS2DRF&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73fcSvi18ZPZuQ_g7a0mZcS6sKX3AWEKlUDrO1cHg8m3h6e86X_QilrNOcQ6WbQb3K34vFQQpetOFS2_q_w753lTS7wJyCQrNyN_o8HMqZsSpImWSdblJRNAHSQbXor-NHYjxyn&source=gbs_api",
+      "small": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71W8W9fAJ5IQ5AKTx17JWGEgq9L50znddAGg1c_G9y4LeWhCDzkfzLbQz9HWE58k5_EdSjij6QqdyQ-RrppmMKbULHTHZj0i-1RCbcBS2xu2EScX-2xxocf00tFQfAB-8wy6zDR&source=gbs_api",
+      "medium": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71waD4R6O4BPZuRDw08SgOk-QJ4MQl-QvCpfGEgNgdmgtCfNjf9u_mWLBnD1GcCv05a_lM6Zb8UDhP_7U1O4n6f23cuFq-tK1VBZW28u8TNFxeRGYVU8idM4Yvk1SWwwF1FdLCq&source=gbs_api",
+      "large": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72rmoEZL238ZDcwU6Tpze8TehPwC-wK8Sbs0kMtuh2kdrTbEx6OfENFV3xQRxfddnrR3sPODRPqHEtSSJrHUAvIbfOjG9XKMzIU7MsozBxWt-Hc6rg06AV0tV9GuyoGVX9e4QUz&source=gbs_api",
+      "extraLarge": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE719vF0SNG1SPfaATpGVSHdVaRoG7GZQs_RH5VOfjeNvOPjERDYe9yP2NgaMYqJ2v1peW0zkN2dJxprgcNlr1H3hClBzbNJkBmTFJ63GcxjVEFNP4cHqWZhWZvBwu267h5J70FLd&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.br/books?id=Rhl1CgAAQBAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=Rhl1CgAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-Rhl1CgAAQBAJ"
+  },
+  "layerInfo": {
+    "layers": [
+      {
+        "layerId": "geo",
+        "volumeAnnotationsVersion": "3"
+      }
+    ]
+  },
+  "saleInfo": {
+    "country": "BR",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+      "amount": 74.99,
+      "currencyCode": "BRL"
+    },
+    "retailPrice": {
+      "amount": 74.99,
+      "currencyCode": "BRL"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=Rhl1CgAAQBAJ&rdid=book-Rhl1CgAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+      {
+        "finskyOfferType": 1,
+        "listPrice": {
+          "amountInMicros": 7.499E7,
+          "currencyCode": "BRL"
+        },
+        "retailPrice": {
+          "amountInMicros": 7.499E7,
+          "currencyCode": "BRL"
+        },
+        "giftable": true
+      }
+    ]
+  },
+  "accessInfo": {
+    "country": "BR",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+      "isAvailable": true
+    },
+    "pdf": {
+      "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.br/books/reader?id=Rhl1CgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  }
+}
