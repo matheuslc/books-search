@@ -38,15 +38,11 @@ export class Book extends Component {
 
     return words.map((word, index) => {
       if (word.toLocaleLowerCase() === term.toLowerCase()) {
-        return (
-          <strong key={index}>{ word }</strong>
-        );
+        return `<strong key={index}> ${word}</strong>`
       }
 
-      return (
-        <span key={index}> { word } </span>
-      );
-    });
+       return word
+    }).join(' ');
   }
 
   render() {
@@ -55,7 +51,9 @@ export class Book extends Component {
       <div className="book">
         <header className="book__header">
           <Link to={`books/${this.props.book.id}`}>
-            <h1 className="book__title">{ this.hightlightTerm(this.props.term, this.props.book.volumeInfo.title) }</h1>
+            <h1 className="book__title"
+                dangerouslySetInnerHTML={{__html: this.hightlightTerm(this.props.term, this.props.book.volumeInfo.title) }}>
+            </h1>
           </Link>
         </header>
 
