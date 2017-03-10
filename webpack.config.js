@@ -33,7 +33,6 @@ module.exports = {
     extensions: [".js", ".json", ".jsx", ".css"],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('development')

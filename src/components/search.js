@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import * as _ from 'lodash';
 import { search } from '../actions/index';
 
@@ -32,7 +33,9 @@ class Search extends Component {
                  query: event.target.value
                }) } />
 
-        <button onClick={() => this.search(this.state.query)}>Vai!</button>
+        <Link to="/">
+          <button onClick={() => this.search(this.state.query)}>Vai!</button>
+        </Link>
       </nav>
     )
   }
