@@ -18,7 +18,7 @@ A ideia inicial do projeto era estiliza-lo totalmente, apenas usando um sistema 
 obrigaram a usar o Bootstrap V4 (via CDN) para deixar o projeto minimamente utilizável :(
 
 ## Marcar livro como favorito
-Esta funcionalidade está implementada, porém, não foi liberada para a interface. O motivo disso, foi que não deu
+Esta funcionalidade está implementada, porém, não foi liberada para a interface. O motivo disso foi que não deu
 tempo de estilizar minimamente decente a página de favoritos, então, preferi deixar escondida.
 Apesar de escondida, no código é possível ver toda a implementação, desde os componentes, actions e persistência em localStorage.
 A persistência no localStorage é feita com um objetos de objetos (uma tabela hash).
