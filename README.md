@@ -61,3 +61,6 @@ mais algumas coisas.
 * A estrutura de pastas foi pensada para uma aplicação pequena. Caso cresça, mudar para uma estrutura de módulos.
 * Melhorar o estado de loading com elementos "Fake" (que descrevem o original mas sem o conteúdo).
 * Dispersar a responsabilidade de fazer o load do "seu estilo" para cada componente.
+
+# Foco do projeto
+Pelo fato de ser um teste para o time de engenharia, o foco foi a implementação, deixando de lado a UI.
