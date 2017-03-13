@@ -14,8 +14,8 @@ estados da nossa aplicação).
 A estrutura de arquivos não foi dividida em módulos pelo tamanho do projeto. Caso fosse um projeto maior, seria melhor
 quebrar a estrutura da pasta em módulos e nesta pasta os componentes de cada módulo.
 
-A ideia inicial do projeto era estiliza-lo totalmente, apenas usando um sistema de grid. Mas, trabalho, faculdade etc, me
-obrigaram a usar o Bootstrap V4 (via CDN) para deixar o projeto minimamente utilizável :(
+A ideia inicial do projeto era estiliza-lo totalmente, apenas usando um sistema de grid. Mas, o pouco tempo me
+obrigou a usar o Bootstrap V4 (via CDN) para deixar o projeto minimamente utilizável :(
 
 ## Marcar livro como favorito
 Esta funcionalidade está implementada, porém, não foi liberada para a interface. O motivo disso foi que não deu
